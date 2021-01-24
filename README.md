@@ -1,5 +1,6 @@
 # 宝塔面板Windows提权方法
 
+本项目整理一些宝塔特性，可以在无漏洞的情况下利用这些特性来增加提权的机会。
 
 
 Table of Contents
@@ -41,11 +42,16 @@ powershell -Command "get-acl C:\BtSoft\panel\data\default.db | format-list"
 
 ## API提权
 
-宝塔面板支持API操作的，token在`C:\BtSoft\panel\config\api.json`，用这个方法提权还可以无视入口校验，比如有一个未授权访问的redis是system权限，就可以直接往这个文件覆盖token直接接管面板，或是利用filezilla(windows面板默认ftp软件就是filezilla+空密码)新建一个C盘权限的账号，也可以去修改那个文件来提权。
+宝塔面板支持API操作的，token在`C:\BtSoft\panel\config\api.json`，用这个方法提权还可以无视入口校验，比如有一个**未授权访问的redis是system权限**，就可以直接往这个文件覆盖token直接接管面板，或是利用FileZilla(windows面板默认ftp软件就是FileZilla + 空密码)新建一个C盘权限的账号，也可以去修改那个文件来提权。
 
 
 
 API Token: `md5(string)`
+
+api.json
+```json
+{"open": true, "token": "API Token", "limit_addr": ["你的IP"]}
+```
 
 请求时加上(`multipart/form-data`)：
 
