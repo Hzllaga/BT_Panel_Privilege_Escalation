@@ -32,7 +32,7 @@ powershell -Command "get-acl C:\BtSoft\panel\data\default.db | format-list"
 
 
 
-盐： `[A-Za-z0-9]{10}`
+盐： `[A-Za-z0-9]{12}`
 
 密码： `md5(md5(md5(password) + '_bt.cn') + salt)`
 
