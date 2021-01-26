@@ -60,7 +60,7 @@ request_token = md5(timestamp + token)
 request_time = timestamp
 ```
 
-可以直接使用`bt_panel_api.py`，脚本会自动使用计划任务运行命令，如果面板原本就有配置好API了，并且IP限制127.0.0.1，那么就可以直接端口转发出来直接用脚本提权。
+可以直接使用`bt_panel_api.py`，脚本会自动使用计划任务运行命令，如果面板原本就有配置好API了，并且IP限制127.0.0.1，那么就可以直接在服务器直接用脚本提权。
 
 
 
@@ -106,4 +106,4 @@ python3 .\bt_panel_api.py -u "http://192.168.101.5:8888/" -t "085bd64a698cf601ae
 python3 .\bt_panel_log_delete.py
 ```
 
-这个脚本可以自动清理面板日志
+这个脚本可以自动清理面板日志。

